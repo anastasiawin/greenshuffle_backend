@@ -2,6 +2,9 @@ package de.astradeni.greenshuffle.commons;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class RandomIntegerImpl implements IRandomInteger {
 	private Random random;
 
