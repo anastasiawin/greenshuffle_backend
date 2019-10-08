@@ -19,9 +19,9 @@ public class TaskServiceImpl implements ITaskService {
 	@Autowired
 	private IRandomInteger randomInteger;
 
-	public Task getRandomTask() throws GeneralException {
+	public Task getRandomTask() {
 		List<Task> tasks = dao.findAll();
-		if ((tasks == null) || (tasks.size() == 0)) {
+		if ((tasks == null) || (tasks.isEmpty())) {
 			throw new GeneralException();
 		}
 		int index = randomInteger.nextInt(tasks.size());
