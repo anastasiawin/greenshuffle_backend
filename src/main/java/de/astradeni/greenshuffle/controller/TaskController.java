@@ -10,17 +10,12 @@ import de.astradeni.greenshuffle.services.ITaskService;
 @RestController
 public class TaskController {
 
-	// @Autowired
-	// private TaskDao dao;
-
 	@Autowired
 	private ITaskService taskService;
 
 	@GetMapping("/tasks")
 	public Task getTasks() {
 		return taskService.getRandomTask();
-		// return dao.findAll().get(0).getName();
-
 	}
 
 }
